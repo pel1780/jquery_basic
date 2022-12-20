@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll event 01 - 상단으로 보내는 버튼 만들기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <style>
+        body {
+            height: 500vh;
+        }
+
+        #toTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+        }
+
+        #toTop i {
+            background: tomato;
+            color: #fff;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toTop">
+        <i class="xi-arrow-top"></i>
+    </div>
+
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                var sct = $(window).scrollTop();
+                // 스크롤값을 구하는 공식
+                if (sct > 300) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+                // sct > 300 ? $('#toTop').fadeIn() : $('#toTop').fadeOut()
+            })
+
+            $('#toTop').on('click', function () {
+                $('html, body').animate({ scrollTop: 0 }, 1000)
+            })
+            // 버튼을 클릭할때 제일 위로 올리는 방법 ({ scrollTop: 0 }, 숫자는 시간(1000 = 1s))
+        })
+    </script>
+</body>
+
+</html>
