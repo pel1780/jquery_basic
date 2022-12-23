@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick 06 - 흘러가는 글자</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <style>
+        .linear {
+            padding: 100px 0;
+        }
+
+        .linear h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        .linear p {
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+
+        .linear span {
+            padding: 20px 0;
+            font-size: 100px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 1px 1px 0 #000, -1px -1px #000, -1px 1px #000, 1px -1px #000;
+        }
+
+        .linear strong {
+            padding: 20px 0;
+            font-size: 100px;
+            font-weight: 900;
+            color: #369;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="linear">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, consectetur.</p>
+        <div class="linear_slide">
+            <span>Lorem, ipsum dolor.</span><strong>Lorem ipsum dolor sit amet.</strong>
+            <span>Lorem, ipsum dolor.</span><strong>Lorem ipsum dolor sit amet.</strong>
+        </div>
+
+
+    </section>
+    <script>
+        $(function () {
+            $('.linear_slide').slick({
+                autoplay: true,
+                variableWidth: true,
+                centerMode: true,
+                autoplaySpeed: 0,
+                cssEase: 'linear',
+                speed: 3000,
+            });
+        })
+    </script>
+</body>
+
+</html>

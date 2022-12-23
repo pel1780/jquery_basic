@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click event 07 - top_banner(다른 클래스를 줘서 이벤트를 일어나게)</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .main {
+            height: 100vh;
+            background: #333;
+        }
+
+        .top_banner {
+            background: tomato;
+            transition: 0.5s;
+        }
+
+        .top_banner.on {
+            transform: translate(0, -100%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top_banner">
+            top
+            <i class="xi-close"></i>
+        </div>
+        <h1>
+            <a href="">
+                <img src="../img/logo_w.png" alt="">
+            </a>
+        </h1>
+    </header>
+    <section class="main">
+
+    </section>
+
+
+
+    <script>
+        $(function () {
+            $('.top_banner i').on('click', function () {
+                $('.top_banner').addClass('on');
+            });
+
+
+        });
+        // document.querySelector('.popup01 button').addEventListener('click', (e) => {
+        //     console.log(e.target)
+        // });
+        // document.querySelector('.popup02 button').addEventListener('click', function () {
+        //     console.log(this)
+        // });
+    </script>
+</body>
+
+</html>

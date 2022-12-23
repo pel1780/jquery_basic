@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel event 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <style>
+        body {
+            font-size: 50px;
+        }
+
+        ul>li {
+            display: inline-block;
+        }
+
+        .a {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><button class="btn01">show</button></li>
+        <li><button class="btn02">hide</button></li>
+        <li><button class="btn03">fadeIn</button></li>
+        <li><button class="btn04">fadeOut</button></li>
+        <li><button class="btn05">slideDown</button></li>
+        <li><button class="btn06">slideUp</button></li>
+        <li><button class="btn07">slideToggle</button></li>
+        <li><button class="btn08">toggle</button></li>
+    </ul>
+
+    <div class="a">
+        aaaaaaaaaaaaaaaaaaaaaa
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            $('.btn01').on('click', function () {
+                $('.a').show();
+            });
+            //a를 보이게 하는 
+
+            $('.btn02').on('click', function () {
+                $('.a').hide();
+            });
+            //a를 사라지게 하는 
+
+            $('.btn03').on('click', function () {
+                $('.a').fadeIn();
+            });
+            // 천천히 나오게 하는 (fadeIn()안에는 속도를 조절할수 있다)
+
+            $('.btn04').on('click', function () {
+                $('.a').fadeOut();
+            });
+            // 천천히 사라지게 하는 (fadeOut()안에는 속도를 조절할수 있다)
+
+            $('.btn05').on('click', function () {
+                $('.a').slideDown();
+            });
+            // 위에서 아래로 요소가 내려오면서 보이게 하는(slideDown()안에는 속도를 조절할 수 있다)
+
+            $('.btn06').on('click', function () {
+                $('.a').slideUp();
+            });
+            // 아래에서 위로 요소가 올라가면서 사라지게 하는 (slideUp()안에는 속도를 조절할 수 있다)
+
+            $('.btn07').on('click', function () {
+                $('.a').slideToggle();
+            });
+            // slideDown과 slideUp를 하나의 버튼으로 조절하는
+
+            $('.btn08').on('click', function () {
+                $('.a').toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>
