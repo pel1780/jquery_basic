@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll event 04 - 화면에 도착했을때 애니메이션이 일어나게 aos사용</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <style>
+        section {
+            padding: 150px 0;
+            font-size: 30px;
+        }
+
+        .main {
+            height: 100vh;
+        }
+
+        section:nth-child(even) {
+            background: #f7f7f7;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .content .inner {
+            display: flex;
+            gap: 30px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        나는 main
+    </section>
+    <section class="content">
+        <h2>나는 h2</h2>
+        <div class="inner">
+            <figure data-aos="fade-up" data-aos-delay="300">
+                <img src="../img/cat.jpg" alt="">
+            </figure>
+            <figure data-aos="fade-up" data-aos-delay="600">
+                <img src="../img/cat.jpg" alt="">
+            </figure>
+            <figure data-aos="fade-up" data-aos-delay="900">
+                <img src="../img/cat.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            AOS.init();
+        })
+    </script>
+</body>
+
+</html>
